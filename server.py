@@ -1,7 +1,8 @@
-from flask import Flask, request, jsonify  # Import Flask and helper functions
+from flask import Flask, request, jsonify, CORS  # Import Flask and helper functions
 
 # Create the Flask app
 app = Flask(__name__)
+CORS(app)  # allow all origins for now
 
 # Define a route for our GC content calculation API
 @app.route("/gc-content", methods=["POST"])

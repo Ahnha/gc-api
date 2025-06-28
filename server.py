@@ -3,7 +3,10 @@ from flask_cors import CORS
 
 # Create the Flask app
 app = Flask(__name__)
-CORS(app, origins=["https://ahnha.github.io"])  # allow specific origin
+CORS(app, origins=[
+    "http://localhost:3000",
+    "https://ahnha.github.io",
+]) # allow specific origin
 
 # Define a route for our GC content calculation API
 @app.route("/gc-content", methods=["POST"])

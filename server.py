@@ -1,4 +1,5 @@
-from flask import Flask, request, jsonify, CORS  # Import Flask and helper functions
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 # Create the Flask app
 app = Flask(__name__)
